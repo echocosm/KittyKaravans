@@ -1,4 +1,4 @@
-# ~ ~ ~ T H E   D O C K E T E E R ~ ~ ~ 
+# ~ ~ ~ K I T T Y ~ K A R A V A N S ~ ~ ~
 
 # ~ ~ ~ I M P O R T S ~ ~ ~ 
 try:
@@ -32,17 +32,11 @@ try:
     # Import configurations
     import configs
 
-    # Import logger
-    #from lib.helpers import Logger
-
     # Imports for system tray icon
     from pystray import Icon, Menu, MenuItem
     from PIL import Image
     import webbrowser
 
-    # Modules import - this imports all modules under the modules directory
-    # IDEs will complain about unresolved references, but it runs as intended
-    from modules import *
     print("Imports successful.")
 except ImportError as e:
     print(f"Error importing modules: {e}")
@@ -53,23 +47,21 @@ except ImportError as e:
 
 # Your desired bot permissions
 # Example: Read Messages, Send Messages, Connect to Voice
-CLIENT_ID=1224712607060197397
+CLIENT_ID=configs.SOURCE_CLIENT
 PERMISSIONS = discord.Permissions(administrator=True)
 invite_url = discord.utils.oauth_url(CLIENT_ID, permissions=PERMISSIONS)
 
-MY_GUILD = discord.Object(id=605154816330825758)  # replace with your guild id
+MY_GUILD = discord.Object(id=configs.SOURCE_GUILD)  # replace with your guild id
 
 class MyClient(commands.Bot):
     def __init__(self, *, intents: discord.Intents):
         super().__init__(intents=intents,command_prefix=configs.BOT_PREFIX)
 bot= MyClient(intents=intents)
 
-print('PREFIX = '+str(configs.BOT_PREFIX))
-
 @bot.event
 async def on_ready():
     print('--------')
-    print('    K I T T I E S   &   K A R A V A N S    ')
+    print(' ~ ~ ~ K I T T Y ~ K A R A V A N S ~ ~ ~')
     print('--------')
     print('Discord Idle Game')
     print('--------')
@@ -97,8 +89,9 @@ async def on_interaction(interaction: discord.Interaction):
 
 # File path for storing user message counts
 
-# Function to load user message counts from file
-def load_data(data):
+# ~ ~ L O A D ~ ~ 
+# Function to load user message counts or karavans from file
+def load_data(data): #data: file to load
     try:
         with open(data, 'r') as file:
             return json.load(file)
@@ -129,7 +122,7 @@ async def on_message(message):
         save_data(user_message_counts, "user_message_counts.json")
     await bot.process_commands(message)
 
-# Event to save data when bot shuts down
+# ~ ~ S H U T D O W N ~ ~ 
 @bot.event
 async def on_shutdown():
     save_data(user_message_counts, "user_message_counts.json")
@@ -141,7 +134,8 @@ async def on_shutdown():
 #@Logger(bot)
 async def test(interaction: discord.Interaction):
     await test_module.test(interaction)
-    
+
+# ~ ~ J O I N ~ ~ 
 @bot.tree.command(name="join", description='Start a Karavan or join an existing one')
 async def join(interaction: discord.Interaction, *, karavan: str, user: discord.Member):
     karavan_name = karavan.capitalize() + ' Karavan'
@@ -163,25 +157,25 @@ async def join(interaction: discord.Interaction, *, karavan: str, user: discord.
         print("User not found in the guild.")
         await interaction.response.send_message("User not found in the guild.")
         return
-        # Check if the user is already in the role
+    # Check if the user is already in the role
     if role in user.roles:
-        await interaction.response.send_message(f"{user.display_name} is already in the {role}.")
+        await interaction.response.send_message(f"{user.name} is already in the {role}.")
         return
     try:
         await user.add_roles(role)
-        print(f"{user.display_name} successfully joined the {role}.")
-        message += f"\n{user.display_name} successfully joined the {role}."
+        print(f"{user.name} successfully joined the {role}.")
+        message += f"\n{user.name} successfully joined the {role}."
     except Exception as e:
         print(f"Error: {e}")
         await interaction.response.send_message(f"Error adding user to the {role}.")
         return
     try:
-        print(user.name)
         karavan_data = load_data('karavan_data.json')
         role_str = str(role)
         if role_str not in karavan_data:
             karavan_data[role_str] = {'members': []}
-        karavan_data[role_str]['members'].append(str(user.name))
+        if user.name not in karavan_data:
+            karavan_data[role_str]['members'].append(str(user.name))
         save_data(karavan_data, "karavan_data.json")
     except Exception as e:
         print(f"could not save: {e}")
@@ -190,6 +184,68 @@ async def join(interaction: discord.Interaction, *, karavan: str, user: discord.
         await interaction.response.send_message(message)
     except Exception as e:
         print(f"Error sending message: {e}")
+
+# Kick a player from a caravan
+@bot.tree.command(name="kick", description='Kick a player from a Karavan')
+async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.Member):
+    karavan_name = karavan.capitalize() + ' Karavan'
+    existing_role = discord.utils.get(interaction.guild.roles, name=karavan_name)
+    if existing_role is None:
+        await interaction.response.send_message(f"The {karavan_name} does not exist.")
+        return
+
+    # Check if the user is not in the role
+    if existing_role not in user.roles:
+        await interaction.response.send_message(f"{user.name} is not in the {existing_role}.")
+        return
+
+    try:
+        await user.remove_roles(existing_role)
+        await interaction.response.send_message(f"{user.name} has been kicked from the {existing_role}.")
+
+        # Load existing Karavan data
+        karavan_data = load_data('karavan_data')
+        role_str = str(existing_role)
+
+        # Check if the role exists in karavan_data
+        if role_str in karavan_data:
+            # Remove user name from the list of members. Not working
+            karavan_data[role_str]['members'].remove(user.name)
+
+            # Save updated Karavan data
+            save_data(karavan_data, 'karavan_data')
+    except Exception as e:
+        print(f"Error kicking user: {e}")
+        await interaction.response.send_message("Error kicking user.")
+
+# Delete a caravan
+@bot.tree.command(name="delete", description='Delete a Karavan')
+async def delete(interaction: discord.Interaction, *, karavan: str):
+    karavan_name = karavan.capitalize() + ' Karavan'
+    existing_role = discord.utils.get(interaction.guild.roles, name=karavan_name)
+    if existing_role is None:
+        await interaction.response.send_message(f"The {karavan_name} does not exist.")
+        return
+
+    try:
+        await existing_role.delete()
+        await interaction.response.send_message(f"The {karavan_name} has been deleted.")
+
+        # Load existing Karavan data
+        karavan_data = load_data('karavan_data')
+        role_str = str(existing_role)
+
+        # Check if the role exists in karavan_data
+        if role_str in karavan_data:
+            # Remove the role from karavan_data
+            del karavan_data[role_str]
+
+            # Save updated Karavan data
+            save_data(karavan_data, 'karavan_data')
+    except Exception as e:
+        print(f"Error deleting role: {e}")
+        await interaction.response.send_message("Error deleting role.")
+
 
 # Module: inventory
 # Description: Executes cmd command
@@ -216,15 +272,6 @@ async def inventory(interaction: discord.Interaction):
     print(user_message_counts)
     await interaction.response.send_message(user_message_counts)
     
-# Module: inventory
-# Description: Executes cmd command
-# Usage: /inventory "command" "arg1" "arg2" ...
-#@bot.tree.command(name = "inventory", description = 'print inventory')
-#@Logger(client)
-#async def inventory(interaction: discord.Interaction, *, arg: str):
-    # Use the command and arguments as needed
-#    await inventory_module.inventory(interaction, arg)
-
 # ~ ~ ~ S Y N C ~ ~ ~ 
 
 @bot.command()
@@ -266,7 +313,7 @@ async def sync(ctx: commands.Context, guilds: commands.Greedy[discord.Object], s
 def iconRun():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    print('TOKEN = '+str(configs.BOT_TOKEN))
+    #print('TOKEN = '+str(configs.BOT_TOKEN))
     loop.create_task(bot.start(configs.BOT_TOKEN))
     t1=Thread(target=loop.run_forever)
     t1.start()
