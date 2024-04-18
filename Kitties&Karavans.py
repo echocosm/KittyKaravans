@@ -106,15 +106,14 @@ def save_data(data, file_path):
     except Exception as e:
         print(f"Error saving data to {file_path}: {e}")
 
-# Dictionary to store user message counts
-user_message_counts = load_data('user_message_counts.json')
 
 @bot.event
 async def on_message(message):
+    user_message_counts = load_data('user_message_counts.json')
     print(message.author, ">", message.content)
-    if message.author != bot.user:
+    if message.author.bot == False:
         # Increment message count for the user
-        user_id = str(message.author)
+        user_id = str(message.author.name)
         if user_id not in user_message_counts:
             user_message_counts[user_id] = {'🫓': 0, '🍞': 0, '🥐': 0, '🥟': 0, '🍪': 0, '🍩': 0, '🧁': 0, '🍰': 0}
         # For example, to increment the count for the slot theyre on
@@ -204,7 +203,7 @@ async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.
         await interaction.response.send_message(f"{user.name} has been kicked from the {existing_role}.")
 
         # Load existing Karavan data
-        karavan_data = load_data('karavan_data')
+        karavan_data = load_data('karavan_data.json')
         role_str = str(existing_role)
 
         # Check if the role exists in karavan_data
@@ -213,7 +212,7 @@ async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.
             karavan_data[role_str]['members'].remove(user.name)
 
             # Save updated Karavan data
-            save_data(karavan_data, 'karavan_data')
+            save_data(karavan_data, "karavan_data.json")
     except Exception as e:
         print(f"Error kicking user: {e}")
         await interaction.response.send_message("Error kicking user.")
@@ -232,16 +231,14 @@ async def delete(interaction: discord.Interaction, *, karavan: str):
         await interaction.response.send_message(f"The {karavan_name} has been deleted.")
 
         # Load existing Karavan data
-        karavan_data = load_data('karavan_data')
+        karavan_data = load_data('karavan_data.json')
         role_str = str(existing_role)
-
         # Check if the role exists in karavan_data
         if role_str in karavan_data:
             # Remove the role from karavan_data
             del karavan_data[role_str]
-
             # Save updated Karavan data
-            save_data(karavan_data, 'karavan_data')
+            save_data(karavan_data, "karavan_data.json")
     except Exception as e:
         print(f"Error deleting role: {e}")
         await interaction.response.send_message("Error deleting role.")
@@ -250,27 +247,47 @@ async def delete(interaction: discord.Interaction, *, karavan: str):
 # Module: inventory
 # Description: Executes cmd command
 # Usage: /inventory "command" "arg1" "arg2" ...
-@bot.tree.command(name = "inventory", description = 'print inventory')
-#@Logger(client)
-async def inventory(interaction: discord.Interaction):
-    print(">> command received >> inventory")
+@bot.tree.command(name="inventory", description='Print inventory')
+async def inventory(interaction: discord.Interaction, *, karavan: str):
+    karavan_name = karavan.capitalize() + ' Karavan'
+    print(">> Command received >> Inventory")
+
+    # Load karavan data
+    karavan_data = load_data('karavan_data.json')
+    members_with_role = []
+    user_message_counts = load_data('user_message_counts.json')
+    # Retrieve members with the specific role
+    for member in interaction.guild.members:
+        if any(role.name == karavan_name for role in member.roles):
+            members_with_role.append(member)
+
     menu = ViewMenu(interaction, menu_type=ViewMenu.TypeEmbed)
-    for member in set(bot.get_all_members()):
-            if member.avatar:
-                try:
-                    embed = discord.Embed(description='test')
-                except Exception as e:
-                    print(f"Error: {e}")
-                embed.set_author(name=member.name, icon_url=member.avatar.url)
-                menu.add_page(embed)
-    
+
+    # Add pages for members with the specific role
+    for member in members_with_role:
+        if member.avatar:
+            print('checkpoint')
+            embed = discord.Embed(title=f'Pastries - {member.name}')
+            embed.set_thumbnail(url=member.avatar.url)
+            
+            # Format values as code blocks
+            value_emojis = ['🫓', '🍞', '🥐', '🥟', '🍪', '🍩', '🧁', '🍰']
+            for emoji in value_emojis:
+                value = user_message_counts[member.name][emoji]
+                value_code_block = f"```\n{value}\n```"  # Format value as code block
+                embed.add_field(name=emoji, value=value_code_block, inline=True)
+
+            menu.add_page(embed)
+
+
+    # Add buttons to the menu
     menu.add_button(ViewButton.back())
     menu.add_button(ViewButton.next())
     menu.add_button(ViewButton.end_session())
-    
+
+    # Start the menu
     await menu.start()
-    print(user_message_counts)
-    await interaction.response.send_message(user_message_counts)
+
     
 # ~ ~ ~ S Y N C ~ ~ ~ 
 
