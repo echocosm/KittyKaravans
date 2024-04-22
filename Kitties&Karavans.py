@@ -44,9 +44,6 @@ except ImportError as e:
 # ~ ~ ~ C R E A T E - L I F E ~ ~ ~ 
 
 # Create a bot client with a description and a command prefix
-
-# Your desired bot permissions
-# Example: Read Messages, Send Messages, Connect to Voice
 CLIENT_ID=configs.SOURCE_CLIENT
 PERMISSIONS = discord.Permissions(administrator=True)
 invite_url = discord.utils.oauth_url(CLIENT_ID, permissions=PERMISSIONS)
@@ -85,12 +82,7 @@ async def on_interaction(interaction: discord.Interaction):
 
 # ~ ~ ~ M O D U L E S ~ ~ ~ 
 
-# ~ ~ ~ C O U N T E R ~ ~ ~ 
-
-# File path for storing user message counts
-
 # ~ ~ L O A D ~ ~ 
-# Function to load user message counts or karavans from file
 def load_data(data): #data: file to load
     try:
         with open(data, 'r') as file:
@@ -98,46 +90,56 @@ def load_data(data): #data: file to load
     except FileNotFoundError:
         return {}
 
-# Function to save user message counts to file
-def save_data(data, file_path):
+# ~ ~ S A V E ~ ~ 
+def save_data(data, file_path): # data: file to save
     try:
         with open(file_path, 'w') as file:
             json.dump(data, file)
     except Exception as e:
         print(f"Error saving data to {file_path}: {e}")
 
-
+# ~ ~ O N ~ M E S S A G E ~ ~ 
 @bot.event
 async def on_message(message):
-    user_message_counts = load_data('user_message_counts.json')
+    pastries = load_data('pastries.json')
+    karavan_data = load_data('karavan_data.json')
     print(message.author, ">", message.content)
-    if message.author.bot == False:
+    if not message.author.bot:
         # Increment message count for the user
         user_id = str(message.author.name)
-        if user_id not in user_message_counts:
-            user_message_counts[user_id] = {'🫓': 0, '🍞': 0, '🥐': 0, '🥟': 0, '🍪': 0, '🍩': 0, '🧁': 0, '🍰': 0}
-        # For example, to increment the count for the slot theyre on
-        user_message_counts[user_id]['🍞'] += 1
-        save_data(user_message_counts, "user_message_counts.json")
+        
+        # Check if the user is part of any karavan
+        karavan = None
+        for karavan_name, karavan_info in karavan_data.items():
+            if user_id in karavan_info['members']:
+                karavan = karavan_name
+                break
+        
+        if karavan:
+            # Increment the count for the '🍞' slot
+            pastries[karavan]['members'][user_id]['🍞'] += 1
+            
+            # Save pastry data
+            save_data(pastries, "pastries.json")
+    
     await bot.process_commands(message)
 
 # ~ ~ S H U T D O W N ~ ~ 
 @bot.event
 async def on_shutdown():
-    save_data(user_message_counts, "user_message_counts.json")
-
-# Module: screenshot
-# Description: Takes a screenshot and sends it back
-# Usage: !screenshot or !screenshot secondsToScreenshot
-@bot.tree.command(name = "test", description = 'grabs all 3 displays')
-#@Logger(bot)
-async def test(interaction: discord.Interaction):
-    await test_module.test(interaction)
+    save_data(pastries, "pastries.json")
 
 # ~ ~ J O I N ~ ~ 
 @bot.tree.command(name="join", description='Start a Karavan or join an existing one')
 async def join(interaction: discord.Interaction, *, karavan: str, user: discord.Member):
     karavan_name = karavan.capitalize() + ' Karavan'
+    
+        # Check if the user already has a role containing the word "Karavan"
+    existing_karavan_roles = [role for role in user.roles if "Karavan" in role.name]
+    if existing_karavan_roles:
+        await interaction.response.send_message(f"{user.name} is already in a Karavan.")
+        return
+    
     existing_role = discord.utils.get(interaction.guild.roles, name=karavan_name)
     if existing_role is not None:
         role = existing_role
@@ -156,21 +158,26 @@ async def join(interaction: discord.Interaction, *, karavan: str, user: discord.
         print("User not found in the guild.")
         await interaction.response.send_message("User not found in the guild.")
         return
-    # Check if the user is already in the role
     if role in user.roles:
         await interaction.response.send_message(f"{user.name} is already in the {role}.")
         return
     try:
         await user.add_roles(role)
-        print(f"{user.name} successfully joined the {role}.")
-        message += f"\n{user.name} successfully joined the {role}."
+        print(f"{user.name} given the role {role}.")
+        message += f"\n{user.name} given the role {role}."
     except Exception as e:
         print(f"Error: {e}")
-        await interaction.response.send_message(f"Error adding user to the {role}.")
+        await interaction.response.send_message(f"Error granting role {role}.")
         return
     try:
-        karavan_data = load_data('karavan_data.json')
+        pastries = load_data('pastries.json')
         role_str = str(role)
+        if role_str not in pastries:
+            pastries[role_str] = {'members': {}}
+        if user.name not in pastries[role_str]['members']:
+            pastries[role_str]['members'][user.name] = {'🫓': 0, '🥯': 0, '🍞': 0, '🥐': 0, '🥟': 0, '🍪': 0, '🍩': 0, '🧁': 0, '🍰': 0}
+        save_data(pastries, "pastries.json")
+        karavan_data = load_data('karavan_data.json')
         if role_str not in karavan_data:
             karavan_data[role_str] = {'members': []}
         if user.name not in karavan_data:
@@ -184,7 +191,7 @@ async def join(interaction: discord.Interaction, *, karavan: str, user: discord.
     except Exception as e:
         print(f"Error sending message: {e}")
 
-# Kick a player from a caravan
+# ~ ~ K I C K ~ ~ 
 @bot.tree.command(name="kick", description='Kick a player from a Karavan')
 async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.Member):
     karavan_name = karavan.capitalize() + ' Karavan'
@@ -193,8 +200,7 @@ async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.
         await interaction.response.send_message(f"The {karavan_name} does not exist.")
         return
 
-    # Check if the user is not in the role
-    if existing_role not in user.roles:
+    if existing_role not in user.roles: # Check if the user is not in the role
         await interaction.response.send_message(f"{user.name} is not in the {existing_role}.")
         return
 
@@ -205,19 +211,28 @@ async def kick(interaction: discord.Interaction, *, karavan: str, user: discord.
         # Load existing Karavan data
         karavan_data = load_data('karavan_data.json')
         role_str = str(existing_role)
+        pastries = load_data('pastries.json')
 
         # Check if the role exists in karavan_data
         if role_str in karavan_data:
             # Remove user name from the list of members. Not working
             karavan_data[role_str]['members'].remove(user.name)
-
-            # Save updated Karavan data
             save_data(karavan_data, "karavan_data.json")
+        # Remove user data from pastries
+        if user.name in pastries.get(role_str, {}).get('members', {}):
+            try:
+                del pastries[role_str]['members'][user.name]
+                save_data(pastries, 'pastries.json')
+            except Exception as e:
+                print(f"Error deleting user pastries: {e}")
+        else:
+            print(f"{user.name} not in pastries")
+
     except Exception as e:
         print(f"Error kicking user: {e}")
         await interaction.response.send_message("Error kicking user.")
 
-# Delete a caravan
+# ~ ~ D E L E T E ~ ~ 
 @bot.tree.command(name="delete", description='Delete a Karavan')
 async def delete(interaction: discord.Interaction, *, karavan: str):
     karavan_name = karavan.capitalize() + ' Karavan'
@@ -225,28 +240,25 @@ async def delete(interaction: discord.Interaction, *, karavan: str):
     if existing_role is None:
         await interaction.response.send_message(f"The {karavan_name} does not exist.")
         return
-
     try:
         await existing_role.delete()
         await interaction.response.send_message(f"The {karavan_name} has been deleted.")
-
         # Load existing Karavan data
         karavan_data = load_data('karavan_data.json')
         role_str = str(existing_role)
+        pastries = load_data('pastries.json')
         # Check if the role exists in karavan_data
         if role_str in karavan_data:
-            # Remove the role from karavan_data
-            del karavan_data[role_str]
-            # Save updated Karavan data
+            del karavan_data[role_str] # Remove the role from karavan_data
             save_data(karavan_data, "karavan_data.json")
+        if role_str in pastries:
+            del pastries[role_str] # Remove the role from pastries
+            save_data(pastries, "pastries.json")
     except Exception as e:
         print(f"Error deleting role: {e}")
         await interaction.response.send_message("Error deleting role.")
 
-
-# Module: inventory
-# Description: Executes cmd command
-# Usage: /inventory "command" "arg1" "arg2" ...
+# ~ ~ I N V E N T O R Y ~ ~ 
 @bot.tree.command(name="inventory", description='Print inventory')
 async def inventory(interaction: discord.Interaction, *, karavan: str):
     karavan_name = karavan.capitalize() + ' Karavan'
@@ -255,7 +267,7 @@ async def inventory(interaction: discord.Interaction, *, karavan: str):
     # Load karavan data
     karavan_data = load_data('karavan_data.json')
     members_with_role = []
-    user_message_counts = load_data('user_message_counts.json')
+    pastries = load_data('pastries.json')
     # Retrieve members with the specific role
     for member in interaction.guild.members:
         if any(role.name == karavan_name for role in member.roles):
@@ -266,20 +278,18 @@ async def inventory(interaction: discord.Interaction, *, karavan: str):
     # Add pages for members with the specific role
     for member in members_with_role:
         if member.avatar:
-            print('checkpoint')
             embed = discord.Embed(title=f'Pastries - {member.name}')
             embed.set_thumbnail(url=member.avatar.url)
             
             # Format values as code blocks
-            value_emojis = ['🫓', '🍞', '🥐', '🥟', '🍪', '🍩', '🧁', '🍰']
+            value_emojis = ['🫓', '🥯', '🍞', '🥐', '🥟', '🍪', '🍩', '🧁', '🍰']
             for emoji in value_emojis:
-                value = user_message_counts[member.name][emoji]
-                value_code_block = f"```\n{value}\n```"  # Format value as code block
+                value = pastries[karavan_name]['members'][member.name][emoji]
+                value_code_block = f"*{value}*"  # Format value as code block
                 embed.add_field(name=emoji, value=value_code_block, inline=True)
 
             menu.add_page(embed)
-
-
+            
     # Add buttons to the menu
     menu.add_button(ViewButton.back())
     menu.add_button(ViewButton.next())
@@ -288,9 +298,7 @@ async def inventory(interaction: discord.Interaction, *, karavan: str):
     # Start the menu
     await menu.start()
 
-    
 # ~ ~ ~ S Y N C ~ ~ ~ 
-
 @bot.command()
 @commands.guild_only()
 @commands.is_owner()
