@@ -3,6 +3,7 @@
 # ~ ~ ~ I M P O R T S ~ ~ ~ 
 try:
     import os
+    import random
     import reactionmenu
     from reactionmenu import ViewMenu, ViewButton
     import json
@@ -105,10 +106,7 @@ async def on_message(message):
     karavan_data = load_data('karavan_data.json')
     print(message.author, ">", message.content)
     if not message.author.bot:
-        # Increment message count for the user
         user_id = str(message.author.name)
-        
-        # Check if the user is part of any karavan
         karavan = None
         for karavan_name, karavan_info in karavan_data.items():
             if user_id in karavan_info['members']:
@@ -116,11 +114,26 @@ async def on_message(message):
                 break
         
         if karavan:
-            # Increment the count for the '🍞' slot
-            pastries[karavan]['members'][user_id]['🍞'] += 1
+            role_data = karavan_data.get(karavan, {})
+            members_data = role_data.get('members', {})
+            user_slots = members_data.get(user_id, {})
+            #print("User Slots >", user_slots)  # Check if user_slots contains the expected values
+            #print("Values >", user_slots.values())
+            values_dict = next(iter(user_slots.values()))
+            # Access the 'pastries' dictionary
+            pastries_dict = user_slots['pastries']
+
+            # Select a slot randomly based on weights in the 'pastries' dictionary
+            selected_slot = random.choices(list(pastries_dict.keys()), weights=pastries_dict.values(), k=1)[0]
+
+            #print("checkpoint3")
+            # Increment the selected slot in pastries_data by 1
+            pastries_data = pastries.setdefault(karavan, {}).setdefault('members', {}).setdefault(user_id, {}).setdefault('pastries', {})
+            pastries_data[selected_slot] = pastries_data.get(selected_slot, 0) + 1
             
-            # Save pastry data
+            #print("Updated Pastries:", pastries)  # Check the updated pastries data
             save_data(pastries, "pastries.json")
+
     
     await bot.process_commands(message)
 
@@ -175,13 +188,13 @@ async def join(interaction: discord.Interaction, *, karavan: str, user: discord.
         if role_str not in pastries:
             pastries[role_str] = {'members': {}}
         if user.name not in pastries[role_str]['members']:
-            pastries[role_str]['members'][user.name] = {'🫓': 0, '🥯': 0, '🍞': 0, '🥐': 0, '🥟': 0, '🍪': 0, '🍩': 0, '🧁': 0, '🍰': 0}
+            pastries[role_str]['members'][user.name] = {'pastries': {'🫓': 0,'🍞': 0,'🥯': 0,'🥐': 0,'🥟': 0,'🍪': 0,'🍩': 0,'🧁': 0,'🍰': 0}}
         save_data(pastries, "pastries.json")
         karavan_data = load_data('karavan_data.json')
         if role_str not in karavan_data:
-            karavan_data[role_str] = {'members': []}
-        if user.name not in karavan_data:
-            karavan_data[role_str]['members'].append(str(user.name))
+            karavan_data[role_str] = {'members': {}}
+        if user.name not in karavan_data[role_str]['members']:
+            karavan_data[role_str]['members'][user.name] = {'pastries': {'🫓': 40,'🍞': 5,'🥯': 5,'🥐': 5,'🥟': 5,'🍪': 5,'🍩': 5,'🧁': 5,'🍰': 5}}
         save_data(karavan_data, "karavan_data.json")
     except Exception as e:
         print(f"could not save: {e}")
@@ -259,7 +272,7 @@ async def delete(interaction: discord.Interaction, *, karavan: str):
         await interaction.response.send_message("Error deleting role.")
 
 # ~ ~ I N V E N T O R Y ~ ~ 
-@bot.tree.command(name="inventory", description='Print inventory')
+@bot.tree.command(name="inventory", description='Print Inventory')
 async def inventory(interaction: discord.Interaction, *, karavan: str):
     karavan_name = karavan.capitalize() + ' Karavan'
     print(">> Command received >> Inventory")
@@ -281,11 +294,11 @@ async def inventory(interaction: discord.Interaction, *, karavan: str):
             embed = discord.Embed(title=f'Pastries - {member.name}')
             embed.set_thumbnail(url=member.avatar.url)
             
-            # Format values as code blocks
-            value_emojis = ['🫓', '🥯', '🍞', '🥐', '🥟', '🍪', '🍩', '🧁', '🍰']
+            # Format values as italics
+            value_emojis = ['🫓', '🍞', '🥯', '🥐', '🥟', '🍪', '🍩', '🧁', '🍰']
             for emoji in value_emojis:
-                value = pastries[karavan_name]['members'][member.name][emoji]
-                value_code_block = f"*{value}*"  # Format value as code block
+                value = pastries[karavan_name]['members'][member.name]["pastries"][emoji]
+                value_code_block = f"*{value}*"  # Format value as italics
                 embed.add_field(name=emoji, value=value_code_block, inline=True)
 
             menu.add_page(embed)
@@ -297,6 +310,44 @@ async def inventory(interaction: discord.Interaction, *, karavan: str):
 
     # Start the menu
     await menu.start()
+
+# ~ ~ U P G R A D E ~ ~ 
+@bot.tree.command(name="upgrade", description='Buy Upgrades')
+async def inventory(interaction: discord.Interaction):
+    print(">> Command received >> Upgrade")
+
+    # Load pastries data
+    pastries = load_data('pastries.json')
+
+    # Get the user who used the command
+    user = interaction.user
+    print(user.name)
+    print(pastries)
+    # Check if the user has pastries data
+    if user.name in pastries:
+        # Create an embed for the user's inventory
+        embed = discord.Embed(title=f'Pastries - {user.name}')
+        if user.avatar:
+            embed.set_thumbnail(url=user.avatar.url)
+
+        # Add the pastries of the user to the embed
+        for emoji, value in pastries[user.name]["pastries"].items():
+            value_italics = f"*{value}*"
+            embed.add_field(name=emoji, value=value_italics, inline=True)
+
+        # Create buttons for each emoji in the user's inventory
+        buttons = []
+        for emoji in pastries[user.name]["pastries"].keys():
+            button = reactionmenu.create_button(style=reactionmenu.Style.PRIMARY, label=emoji, custom_id=emoji)
+            buttons.append(button)
+
+        # Create a reaction menu with the buttons
+        menu = reactionmenu.Menu(embed=embed, buttons=buttons)
+        await menu.send(interaction)
+    else:
+        # If the user does not have pastries data, inform them
+        await interaction.response.send_message("You don't have any pastries data yet.")
+
 
 # ~ ~ ~ S Y N C ~ ~ ~ 
 @bot.command()

@@ -1,0 +1,521 @@
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'inventory'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 298, in inventory
+    value = pastries[karavan_name]['members'][member.name]['pastries'][emoji]
+KeyError: 'pastries'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'inventory' raised an exception: KeyError: 'pastries'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'kick'
+Traceback (most recent call last):
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 230, in kick
+    karavan_data[role_str]['members'].remove(user.name)
+AttributeError: 'dict' object has no attribute 'remove'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 244, in kick
+    await interaction.response.send_message("Error kicking user.")
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\interactions.py", line 743, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'kick' raised an exception: InteractionResponded: This interaction has already been responded to before
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'inventory'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 298, in inventory
+    value = pastries[karavan_name]['members'][member.name]["pastries"][emoji]
+KeyError: 'pastries'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'inventory' raised an exception: KeyError: 'pastries'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 315, in upgrade
+    karavan_name = karavan.capitalize() + ' Karavan'
+NameError: name 'karavan' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NameError: name 'karavan' is not defined
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'kick'
+Traceback (most recent call last):
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 229, in kick
+    karavan_data[role_str]['members'].remove(user.name)
+AttributeError: 'dict' object has no attribute 'remove'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 243, in kick
+    await interaction.response.send_message("Error kicking user.")
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\interactions.py", line 743, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'kick' raised an exception: InteractionResponded: This interaction has already been responded to before
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 123, in on_message
+    total_weight = sum(user_slots.values())
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 121, in on_message
+    print("Values >", sum(user_slots.values()))
+TypeError: unsupported operand type(s) for +: 'int' and 'dict'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 122, in on_message
+    print("Values >", sum(c[1] for c in user_slots.values()))
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 122, in <genexpr>
+    print("Values >", sum(c[1] for c in user_slots.values()))
+KeyError: 1
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 126, in on_message
+    selected_slot = random.choices(list(user_slots.keys()), weights=user_slots.values(), k=1)[0]
+  File "C:\Users\oakne\AppData\Local\Programs\Python\Python310\lib\random.py", line 533, in choices
+    total = cum_weights[-1] + 0.0   # convert to float
+TypeError: unsupported operand type(s) for +: 'dict' and 'float'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 317, in upgrade
+    karavan_name = karavan.capitalize() + ' Karavan'
+NameError: name 'karavan' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NameError: name 'karavan' is not defined
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 348, in upgrade
+    await menu.start()
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\decorators.py", line 40, in wrapper
+    return await func(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\views_menu.py", line 1397, in start
+    raise NoPages
+reactionmenu.errors.NoPages: You cannot start a menu when you haven't added any pages
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NoPages: You cannot start a menu when you haven't added any pages
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'

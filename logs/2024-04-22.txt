@@ -1,0 +1,179 @@
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    for slot, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    for slot, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    for slot, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    for slot, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data[role_str]['members'][user.name]
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data[role_str]['members'][user.name]
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    for slot, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    for s, value in karavan_data[role_str]['members'][user.name].items():
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data[role_str]['members'][user.name]
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data.get(role_str, {}).get('members', {}).get(user.name, {})
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data.get(role_str, {}).get('members', {}).get(user.name, {})
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    user_slots = karavan_data.get(role_str, {}).get('members', {}).get(user.name, {})
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    user_slots = karavan_data.get(role_str, {}).get('members', {}).get(user.name, {})
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    role_data = karavan_data.get(role_str, {})
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    role_data = karavan_data.get(role_str, {})
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    print(role_str)
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    print(role_str)
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported

@@ -1,0 +1,276 @@
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 348, in upgrade
+    await menu.start()
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\decorators.py", line 40, in wrapper
+    return await func(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\views_menu.py", line 1397, in start
+    raise NoPages
+reactionmenu.errors.NoPages: You cannot start a menu when you haven't added any pages
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NoPages: You cannot start a menu when you haven't added any pages
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 348, in upgrade
+    await menu.start()
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\decorators.py", line 40, in wrapper
+    return await func(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\reactionmenu\views_menu.py", line 1397, in start
+    raise NoPages
+reactionmenu.errors.NoPages: You cannot start a menu when you haven't added any pages
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NoPages: You cannot start a menu when you haven't added any pages
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 328, in upgrade
+    if member.avatar:
+NameError: name 'member' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: NameError: name 'member' is not defined
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 341, in inventory
+    button = ViewButton(style=ViewButton.Style.PRIMARY, label=emoji, custom_id=emoji)
+AttributeError: type object 'ViewButton' has no attribute 'Style'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: AttributeError: type object 'ViewButton' has no attribute 'Style'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 341, in inventory
+    button = ViewButton(style=ViewButton.Style.PRIMARY, label=emoji, custom_id=emoji)
+AttributeError: type object 'ViewButton' has no attribute 'Style'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: AttributeError: type object 'ViewButton' has no attribute 'Style'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 341, in inventory
+    button = ViewButton(style=ViewButton.Style.PRIMARY, label=emoji, custom_id=emoji)
+AttributeError: type object 'ViewButton' has no attribute 'Style'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: AttributeError: type object 'ViewButton' has no attribute 'Style'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 341, in inventory
+    button = ViewButton(style=ViewButton.Style.PRIMARY, label="emoji", custom_id=emoji)
+AttributeError: type object 'ViewButton' has no attribute 'Style'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: AttributeError: type object 'ViewButton' has no attribute 'Style'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 341, in inventory
+    button = ViewButton(style=ViewButton.Style.PRIMARY, label=emoji, custom_id=emoji)
+AttributeError: type object 'ViewButton' has no attribute 'Style'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: AttributeError: type object 'ViewButton' has no attribute 'Style'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 82, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.app_commands.tree:Ignoring exception in command 'upgrade'
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 862, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 355, in inventory
+    await interaction.response.send_message("You are not in any karavan.")
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\interactions.py", line 743, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\app_commands\commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'upgrade' raised an exception: InteractionResponded: This interaction has already been responded to before

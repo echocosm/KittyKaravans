@@ -1,0 +1,183 @@
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 105, in on_message
+    karavan_data = load_data('karavan_data.json')
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 89, in load_data
+    return json.load(file)
+  File "C:\Users\oakne\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\oakne\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oakne\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\oakne\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 46 (char 45)
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    variable = karavan_data[role_str]['members'][user.name]['\U0001f35e']
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    variable = karavan_data[role_str]['members'][user.name]['\U0001f35e']
+NameError: name 'role_str' is not defined
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 115, in on_message
+    variable = karavan_data[role_str]['members'][user.name]['\U0001f35e']
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    variable = karavan_data[role_str]['members'][user.name]['\U0001f35e']
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 116, in on_message
+    variable = karavan_data[role_str]['members'][user.name]
+NameError: name 'role_str' is not defined
+WARNING:discord.client:PyNaCl is not installed, voice will NOT be supported
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
+ERROR:discord.client:Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\oakne\AppData\Roaming\Python\Python310\site-packages\discord\client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\oakne\Desktop\DiscordBots\KittyKaravans\Kitties&Karavans.py", line 81, in on_interaction
+    await bot.tree.dispatch_interaction(interaction)
+AttributeError: 'CommandTree' object has no attribute 'dispatch_interaction'
