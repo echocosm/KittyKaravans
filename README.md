@@ -1,13 +1,16 @@
 #Kitty Karavans
 
-[Features](#features-of-it)
-
-#roadmap
-#installing
+[>Features](#features)
+[>Roadmap](#roadmap)
+[>Install](#features)
 
 Simple overview of use/purpose.
 
-## Features Of It
+## Features
+
+This is a python based discord bot for running the game Kitty Karavans
+
+## Roadmap
 
 This is a python based discord bot for running the game Kitty Karavans
 
@@ -18,7 +21,7 @@ This is a python based discord bot for running the game Kitty Karavans
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * ex. Windows 10
 
-### Installing
+### Install
 
 * How/where to download your program
 * Any modifications needed to be made to files/folders
