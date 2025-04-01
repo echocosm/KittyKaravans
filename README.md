@@ -1,12 +1,12 @@
-# Kitty Karavans
-# features-of-it
+#Kitty Karavans
+#features-of-it
 
 #roadmap
 #installing
 
 Simple overview of use/purpose.
 
-## Features Of It
+#Features Of It
 
 This is a python based discord bot for running the game Kitty Karavans
 
