@@ -1,6 +1,6 @@
 #Kitty Karavans
 
-[>Features](#features)
+[[Features]](#features)
 [>Roadmap](#roadmap)
 [>Install](#features)
 
