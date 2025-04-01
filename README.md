@@ -2,7 +2,7 @@
 
 [[Features]](#features)
 [[Roadmap]](#roadmap)
-[[Install]](#features)
+[[Install]](#install)
 
 Simple overview of use/purpose.
 
@@ -21,7 +21,7 @@ This is a python based discord bot for running the game Kitty Karavans
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * ex. Windows 10
 
-### Install
+### [Install]
 
 * How/where to download your program
 * Any modifications needed to be made to files/folders
