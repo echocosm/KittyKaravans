@@ -1,20 +1,20 @@
 #Kitty Karavans
 
 [[Features]](#features)
-[>Roadmap](#roadmap)
-[>Install](#features)
+[[Roadmap]](#roadmap)
+[[Install]](#features)
 
 Simple overview of use/purpose.
 
-## Features
+## [Features]
 
 This is a python based discord bot for running the game Kitty Karavans
 
-## Roadmap
+## [Roadmap]
 
 This is a python based discord bot for running the game Kitty Karavans
 
-## Getting Started
+## [Getting Started]
 
 ### Dependencies
 
