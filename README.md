@@ -1,5 +1,6 @@
 #Kitty Karavans
-[Go to Real Cool Heading section](#features-of-it)
+
+[Features](#features-of-it)
 
 #roadmap
 #installing
