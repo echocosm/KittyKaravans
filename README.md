@@ -8,7 +8,7 @@
 [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v?style=for-the-badge/unstable)](https://packagist.org/packages/phpunit/phpunit) 
 [![License](http://poser.pugx.org/phpunit/phpunit/license)](https://packagist.org/packages/phpunit/phpunit) 
 [![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php)](https://packagist.org/packages/phpunit/phpunit)
-[![GitHub release](https://img.shields.io/github/v?style=for-the-badge/release/echocosm/KittyKaravans)](#)
+[![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans?style=for-the-badge)](#)
 [![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans)](#)
 [![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4)](https://docs.abblix.com/docs/technical-requirements)
