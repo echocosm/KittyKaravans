@@ -42,7 +42,7 @@ This is a python based discord bot for running the game Kitty Karavans
 ### Rooms
 #### 🎍 Garden Room
 Levels are simultaneous growing patches. Better crops sell for more money
-|||||||
+||||||||
 |:-|:-|:-|:-|:-|:-|:-|
 |Tier 1 🥔|Levels|1|2|3|4|5|
 |Tier 2 🌽|Levels|1|2|3|4|5|
