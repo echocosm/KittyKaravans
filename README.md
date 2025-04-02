@@ -12,54 +12,41 @@
 [![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans?style=for-the-badge)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans?style=for-the-badge)](#)
 [![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)](https://docs.abblix.com/docs/technical-requirements)
-[![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)](https://learn.microsoft.com/ru-ru/dotnet/csharp/tour-of-csharp/overview)
+[![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)]
 
 ## Table Of Content
-
-- [/Install](#install)
-    - [Composer](#composer)
-    - [DDev or Colima](#ddev)
-    - [TER](#ter-extension)
-- [/Features](#features)
+- [What Is?](#what_is)
+    - [Basics](#basics)
+- [Features](#features)
     - [Database setup](#database-setup)
     - [Security](#security)
-- [/Roadmap](#roadmap)
-    - [Download the Aimeos Page Tree t3d file](#download-the-aimeos-page-tree-t3d-file)
-    - [Go to the Import View](#go-to-the-import-view)
-    - [Upload the page tree file](#upload-the-page-tree-file)
-    - [Go to the import view](#go-to-the-import-view)
-    - [Import the page tree](#import-the-page-tree)
-    - [SEO-friendly URLs](#seo-friendly-urls)
-- [/License](#license)
-- [/Acknowledgments](#acknowledgments)
+- [Roadmap](#roadmap)
+- [Install](#install)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## /Install
+## What Is?
 
+Discord Idle Game to play with your server. Start a Karavan, and earn rewards passively by engaging with your friends
 
+### Basics
 
+The core of gameplay is pastires, and the main pastry is biscuits. Kitties make biscuits by typing!
 
-
-Simple overview of use/purpose.
-
-## /Features
+## Features
 
 This is a python based discord bot for running the game Kitty Karavans
 
-## /Roadmap
+## Roadmap
 
 This is a python based discord bot for running the game Kitty Karavans
 
-## /Getting Started
+## Getting Started
 
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * ex. Windows 10
-
-### /Install
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
@@ -68,6 +55,9 @@ This is a python based discord bot for running the game Kitty Karavans
 ```
 code blocks for commands
 ```
+## Install
+
+How To Install
 
 ## Authors
 
