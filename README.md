@@ -27,7 +27,9 @@
 
 ## What Is?
 
-Discord Idle Game to play with your server. Start a Karavan, and earn rewards passively by engaging with your friends
+Discord Idle Game to play with your server. Start a Karavan, build and upgrade new stacking segments, and earn rewards passively by chatting with your friends on discord
+
+Go from town to town trading goods and trinkets, maybe even dungeons
 
 ### Basics
 
@@ -37,9 +39,10 @@ The core of gameplay is pastires, and the main pastry is biscuits. Kitties make 
 
 This is a python based discord bot for running the game Kitty Karavans
 
-## Roadmap
-
-This is a python based discord bot for running the game Kitty Karavans
+### Rooms
+#### Garden Room
+Tier 1
+Tier 2
 
 ## Getting Started
 
