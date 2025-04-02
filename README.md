@@ -1,4 +1,4 @@
-<a href="https://aimeos.org/">
+<a href="[https://aimeos.org](https://github.com/echocosm/KittyKaravans)/">
     <img src="https://github.com/echocosm/KittyKaravans/blob/2bbb12bd29ceef793c3a4d57c6738302ebf2bc6a/wagon.png" alt="Karavan logo" title="KittyKaravans" align="right" height="60" />
 </a>
 
@@ -40,8 +40,9 @@ The core of gameplay is pastires, and the main pastry is biscuits. Kitties make 
 This is a python based discord bot for running the game Kitty Karavans
 
 ### Rooms
-#### Garden Room
-|🎍|Garden Room| Levels are simultaneous growing patches| better crops sell for more money||||
+#### 🎍 Garden Room
+Levels are simultaneous growing patches. Better crops sell for more money
+|||||||
 |:-|:-|:-|:-|:-|:-|:-|
 |Tier 1 🥔|Levels|1|2|3|4|5|
 |Tier 2 🌽|Levels|1|2|3|4|5|
