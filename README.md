@@ -11,8 +11,8 @@
 [![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans?style=for-the-badge)](#)
 [![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans?style=for-the-badge)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans?style=for-the-badge)](#)
-[![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)](https://docs.abblix.com/docs/technical-requirements)
-[![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)]
+![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)
+![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)
 
 ## Table Of Content
 - [What Is?](#what_is)
