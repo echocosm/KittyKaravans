@@ -1,5 +1,5 @@
 <a href="https://aimeos.org/">
-    <img src="(https://github.com/echocosm/KittyKaravans/blob/main/wagon.png)" alt="Karavan logo" title="KittyKaravans" align="right" height="60" />
+    <img src="https://github.com/echocosm/KittyKaravans/blob/2bbb12bd29ceef793c3a4d57c6738302ebf2bc6a/wagon.png" alt="Karavan logo" title="KittyKaravans" align="right" height="60" />
 </a>
 
 # Kitty Karavans
