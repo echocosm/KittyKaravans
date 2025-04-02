@@ -1,8 +1,43 @@
-# Kitty Karavans
+<a href="https://aimeos.org/">
+    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
 
-[/Features](#features)
-[/Roadmap](#roadmap)
-[/Install](#install)
+# Kitty Karavans
+[![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit) 
+[![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads)](https://packagist.org/packages/phpunit/phpunit) 
+[![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v?style=for-the-badge/unstable)](https://packagist.org/packages/phpunit/phpunit) 
+[![License](http://poser.pugx.org/phpunit/phpunit/license)](https://packagist.org/packages/phpunit/phpunit) 
+[![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php)](https://packagist.org/packages/phpunit/phpunit)
+[![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans)](#)
+[![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans)](#)
+[![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans)](#)
+[![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4)](https://docs.abblix.com/docs/technical-requirements)
+[![language](https://img.shields.io/badge/language-C%23-239120)](https://learn.microsoft.com/ru-ru/dotnet/csharp/tour-of-csharp/overview)
+
+## Table Of Content
+
+- [/Install](#install)
+    - [Composer](#composer)
+    - [DDev or Colima](#ddev)
+    - [TER](#ter-extension)
+- [/Features](#features)
+    - [Database setup](#database-setup)
+    - [Security](#security)
+- [/Roadmap](#roadmap)
+    - [Download the Aimeos Page Tree t3d file](#download-the-aimeos-page-tree-t3d-file)
+    - [Go to the Import View](#go-to-the-import-view)
+    - [Upload the page tree file](#upload-the-page-tree-file)
+    - [Go to the import view](#go-to-the-import-view)
+    - [Import the page tree](#import-the-page-tree)
+    - [SEO-friendly URLs](#seo-friendly-urls)
+- [/License](#license)
+- [/Acknowledgments](#acknowledgments)
+
+## /Install
+
+
+
+
 
 Simple overview of use/purpose.
 
@@ -34,19 +69,9 @@ This is a python based discord bot for running the game Kitty Karavans
 code blocks for commands
 ```
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
-Contributors names and contact info
-
-ex. Atlas, Oaklynn, Spira Nomu Echocosm
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Atlas, Oaklynn, Spira Nomu Echocosm
 
 ## Version History
 
@@ -56,11 +81,11 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 * 0.1
     * Initial Release
 
-## License
+## [/License]
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
+## [/Acknowledgments]
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
