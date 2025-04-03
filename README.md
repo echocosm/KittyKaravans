@@ -36,7 +36,7 @@ This is a python based discord bot for running the game ${\textsf{\color{lightgr
 ### Commands
 ${\mathtt{\color{lightgreen}/sync}}$ - Sync commands
 
-${\mathtt{\color{lightgreen}/inventory}}$ ${\mathtt{\color{lightgreen} - Print Inventory}}$
+${\mathtt{\color{lightgreen}/inventory}}$ ${\mathtt{\color{white} - Print Inventory}}$
 
 ${\mathtt{\color{lightgreen}/join} - Start a Karavan or join an existing one}$
 
