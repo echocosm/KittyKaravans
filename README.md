@@ -4,7 +4,7 @@
 
 # Kitty Karavans
 ![Total Downloads](https://img.shields.io/github/downloads/echocosm/KittyKaravans/total.svg?style=for-the-badge)
-![Latest Release](https://img.shields.io/github/last-release/echocosm/KittyKaravans.svg?style=for-the-badge)
+![Latest Release](https://img.shields.io/github/latest-release/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Latest Release Date](https://img.shields.io/github/release-date/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Requirements](https://img.shields.io/badge/Python-3.8--3.9-blue?style=for-the-badge)
