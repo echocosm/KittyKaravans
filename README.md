@@ -50,8 +50,8 @@ $${\color{green}sync}$$ - Sync Commands
 /kick - Kick a player from a Karavan
 ```
 
-<style
-  type="text/css">
+<style>
+  type="text/css"
 h1 {color:red;}
 
 p {color:blue;}
