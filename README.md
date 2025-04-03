@@ -3,7 +3,7 @@
 </a>
 
 # Kitty Karavans
-![Total Downloads](https://img.shields.io/github/downloads/echocosm/KittyKaravans/total)
+![Total Downloads](https://img.shields.io/github/downloads/echocosm/KittyKaravans/total?style=for-the-badge)
 ![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans?style=for-the-badge)
 ![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans?style=for-the-badge)
