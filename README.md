@@ -7,7 +7,7 @@
 ![Latest Release](https://img.shields.io/github/release/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Latest Release Date](https://img.shields.io/github/release-date/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans.svg?style=for-the-badge)
-![Requirements](https://img.shields.io/badge/Python-3.8--3.9-blue?style=for-the-badge)
+![Requirements](https://img.shields.io/badge/Python-310-blue?style=for-the-badge)
 ![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)
 
 
@@ -28,7 +28,21 @@ Go from town to town trading goods and trinkets, maybe even dungeons
 
 ### Basics
 
-The core of gameplay is pastires, and the main pastry is biscuits. Kitties make biscuits by typing!
+Start by using ${\mathsf{\color{lightgreen}/join}}$ to Start a Karavan or join an existing one.
+
+The core of gameplay is pastires, and kitties love to knead dough! Knead dough by typing. When starting out, you earn one basic pastry per message sent. But this can be upgraded!
+|Tier|||
+|:-|:-|:-|
+|Tier 1 🫓|
+|Tier 2 🍞|
+|Tier 3 🥯|
+|Tier 4 🥐|
+|Tier 5 🥟|
+|Tier 6 🍪|
+|Tier 7 🍩|
+|Tier 8 🧁|
+|Tier 9 🍰|
+
 
 ## Features
 
