@@ -37,7 +37,7 @@ This is a python based discord bot for running the game ${\textsf{\color{lightgr
 ```
 /sync - Sync commands
 
-$${\color{green}sync}$$ - Sync Commands
+${\textsf{\color{lightgreen}Kitty Karavans}}$
 
 /inventory - Print inventory
 
