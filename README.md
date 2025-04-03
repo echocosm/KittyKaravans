@@ -3,7 +3,8 @@
 </a>
 
 # Kitty Karavans
-[![Github All Releases](https://img.shields.io/github/downloads/echocosm/KittyKaravans/total.svg)]()
+![Total Downloads](https://img.shields.io/github/downloads/echocosm/KittyKaravans/total)
+
 [![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v)](https://packagist.org/packages/phpunit/phpunit)
 [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v/unstable)](https://packagist.org/packages/phpunit/phpunit)
 [![License](http://poser.pugx.org/phpunit/phpunit/license?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
