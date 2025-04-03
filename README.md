@@ -1,3 +1,5 @@
+font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+
 <a href="[https://aimeos.org](https://github.com/echocosm/KittyKaravans)/">
     <img src="https://github.com/echocosm/KittyKaravans/blob/2bbb12bd29ceef793c3a4d57c6738302ebf2bc6a/wagon.png" alt="Karavan logo" title="KittyKaravans" align="right" height="60" />
 </a>
