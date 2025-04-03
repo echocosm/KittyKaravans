@@ -3,7 +3,7 @@
 </a>
 
 # Kitty Karavans
-![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads)
+![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads?style=for-the-badge)
 [![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v)](https://packagist.org/packages/phpunit/phpunit)
 [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v/unstable)](https://packagist.org/packages/phpunit/phpunit)
 [![License](http://poser.pugx.org/phpunit/phpunit/license?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
