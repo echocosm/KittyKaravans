@@ -7,10 +7,9 @@
 ![Latest Release](https://img.shields.io/github/release/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Latest Release Date](https://img.shields.io/github/release-date/echocosm/KittyKaravans.svg?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans.svg?style=for-the-badge)
-![Requirements](https://img.shields.io/badge/Node.js-14.x-blue?style=for-the-badge)
 ![Requirements](https://img.shields.io/badge/Python-3.8--3.9-blue?style=for-the-badge)
 ![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)
-![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)
+
 
 ## Table Of Content
 - [What Is?](#what_is)
