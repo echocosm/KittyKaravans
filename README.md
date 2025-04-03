@@ -49,6 +49,23 @@ $${\color{green}sync}$$ - Sync Commands
 
 /kick - Kick a player from a Karavan
 ```
+
+<span style="color: #ff6347">/upgrade</span> - <span style="color: #32cd32">Upgrades</span>
+
+<span style="color: #ff6347">/delete</span> - <span style="color: #32cd32">Delete A Karavan</span>
+
+<span style="color: #ff6347">/kick</span> - <span style="color: #32cd32">Kick a player from a Karavan</span>
+
+```
+
+<span style="color: #ff6347">/upgrade</span> - <span style="color: #32cd32">Upgrades</span>
+
+<span style="color: #ff6347">/delete</span> - <span style="color: #32cd32">Delete A Karavan</span>
+
+<span style="color: #ff6347">/kick</span> - <span style="color: #32cd32">Kick a player from a Karavan</span>
+
+```
+
 ### Rooms
 #### 🎍 Garden Room
 Levels are simultaneous growing patches. Better crops sell for more money
