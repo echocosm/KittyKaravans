@@ -37,7 +37,7 @@ This is a python based discord bot for running the game $${\color{green}Kitty Ka
 ```
 /sync - Sync commands
 
-$${\color{green}/sync}$$ - Sync Commands
+$${\color{green}sync}$$ - Sync Commands
 
 /inventory - Print inventory
 
