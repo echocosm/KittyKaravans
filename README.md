@@ -1,6 +1,4 @@
-font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
-
-<a href="[https://aimeos.org](https://github.com/echocosm/KittyKaravans)/">
+<a href="[KittyKaravans](https://github.com/echocosm/KittyKaravans)/">
     <img src="https://github.com/echocosm/KittyKaravans/blob/2bbb12bd29ceef793c3a4d57c6738302ebf2bc6a/wagon.png" alt="Karavan logo" title="KittyKaravans" align="right" height="60" />
 </a>
 
@@ -39,6 +37,7 @@ This is a python based discord bot for running the game $${\color{green}Kitty Ka
 ```
 /sync - Sync commands
 
+$${\color{green}/sync}$$ - Sync Commands
 
 /inventory - Print inventory
 
