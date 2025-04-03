@@ -34,14 +34,20 @@ The core of gameplay is pastires, and the main pastry is biscuits. Kitties make 
 
 This is a python based discord bot for running the game Kitty Karavans
 ### Commands
+```
 /sync - Sync commands
 
-/inventory - Print inventory
-/join - Start a Karavan or join an existing one
-/upgrade - upgrades
-/delete - Delete A Karavan
-/kick - Kick a player from a Karavan
 
+/inventory - Print inventory
+
+/join - Start a Karavan or join an existing one
+
+/upgrade - upgrades
+
+/delete - Delete A Karavan
+
+/kick - Kick a player from a Karavan
+```
 ### Rooms
 #### 🎍 Garden Room
 Levels are simultaneous growing patches. Better crops sell for more money
