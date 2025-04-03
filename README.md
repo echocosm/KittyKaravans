@@ -34,17 +34,17 @@ The core of gameplay is pastires, and the main pastry is biscuits. Kitties make 
 
 This is a python based discord bot for running the game ${\textsf{\color{lightgreen}Kitty Karavans}}$
 ### Commands
-${\mathtt{\color{lightgreen}/sync}}$ ${\mathtt{\color{white}  -  Sync  Commands}}$
+${\mathsf{\color{lightgreen}/sync}}$ ${\textsf{\color{white}  -  Sync  Commands}}$
 
-${\mathtt{\color{lightgreen}/inventory}}$ ${\mathtt{\color{white}  -  Print  Inventory}}$
+${\mathsf{\color{lightgreen}/inventory}}$ ${\textsf{\color{white}  -  Print  Inventory}}$
 
-${\mathtt{\color{lightgreen}/join}}$ ${\mathtt{\color{white}  -  Start  a  Karavan  or  join  an  existing  one}}$
+${\mathsf{\color{lightgreen}/join}}$ ${\textsf{\color{white}  -  Start  a  Karavan  or  join  an  existing  one}}$
 
-${\mathtt{\color{lightgreen}/upgrade}}$ ${\mathtt{\color{white}  -  Coming  Soon!}}$
+${\mathsf{\color{lightgreen}/upgrade}}$ ${\textsf{\color{white}  -  Coming  Soon!}}$
 
-${\mathtt{\color{lightgreen}/delete}}$ ${\mathtt{\color{white}  -  Delete  A  Karavan}}$
+${\mathsf{\color{lightgreen}/delete}}$ ${\textsf{\color{white}  -  Delete  A  Karavan}}$
 
-${\mathtt{\color{lightgreen}/kick}}$ ${\mathtt{\color{white}  -  Kick  a  player  from  a  Karavan}}$
+${\mathsf{\color{lightgreen}/kick}}$ ${\textsf{\color{white}  -  Kick  a  player  from  a  Karavan}}$
 
 ### Rooms
 #### 🎍 Garden Room
