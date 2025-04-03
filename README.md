@@ -3,14 +3,14 @@
 </a>
 
 # Kitty Karavans
-[![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
+[![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v?style=for-the-badge)](https://github.com/echocosm/KittyKaravans)
 [![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
 [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v/unstable?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
 [![License](http://poser.pugx.org/phpunit/phpunit/license?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
 [![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php?style=for-the-badge)](https://packagist.org/packages/phpunit/phpunit)
-[![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans?style=for-the-badge)](#)
-[![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans?style=for-the-badge)](#)
-[![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans?style=for-the-badge)](#)
+![GitHub release](https://img.shields.io/github/v/release/echocosm/KittyKaravans?style=for-the-badge)
+![GitHub release date](https://img.shields.io/github/release-date/echocosm/KittyKaravans?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/echocosm/KittyKaravans?style=for-the-badge)
 ![.NET](https://img.shields.io/badge/.NET-6.0%2C%207.0%2C%208.0%2C%209.0-512BD4?style=for-the-badge)
 ![language](https://img.shields.io/badge/language-Python-green?style=for-the-badge)
 
