@@ -38,26 +38,18 @@ ${\mathtt{\color{lightgreen}/sync}} - Sync commands$
 
 ${\mathtt{\color{lightgreen}/inventory} - Print Inventory}$
 
-${\mathtt{\color{lightgreen}Kitty Karavans}}$
+${\mathtt{\color{lightgreen}/join} - Start a Karavan or join an existing one}$
 
 
 
-/join - Start a Karavan or join an existing one
+
 
 /upgrade - Upgrades
 
 /delete - Delete A Karavan
 
 /kick - Kick a player from a Karavan
-```
 
-<style>
-  type="text/css"
-h1 {color:red;}
-
-p {color:blue;}
-</style>
-okay
 
 ### Rooms
 #### 🎍 Garden Room
