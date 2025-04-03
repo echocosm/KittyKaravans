@@ -32,7 +32,7 @@ The core of gameplay is pastires, and the main pastry is biscuits. Kitties make 
 
 ## Features
 
-This is a python based discord bot for running the game $${\color{green}Kitty Karavans}$$
+This is a python based discord bot for running the game ${\textsf{\color{lightgreen}Kitty Karavans}}$
 ### Commands
 ```
 /sync - Sync commands
